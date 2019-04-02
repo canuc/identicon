@@ -31,8 +31,6 @@ defmodule Identicon do
   defp pixels(hash) do
     chunk_every = div(@pixels, 2) + 1
 
-    IO.inspect(length hash)
-
     hash
     |> Stream.drop(3)
     |> Stream.take(chunk_every * @pixels)
